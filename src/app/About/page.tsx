@@ -2,29 +2,36 @@
 
 import PortfolioCard from "@/components/PortofolioCard";
 import { motion } from "framer-motion";
-import { Target, HeartHandshake, Lightbulb, Globe, Code2, Brush } from "lucide-react";
-
+import {
+  Target,
+  HeartHandshake,
+  Lightbulb,
+  Globe,
+  Code2,
+  Brush,
+} from "lucide-react";
+import Image from "next/image";
 
 const projects = [
-    {
-      title: "Company Profile Website",
-      description: "Website profesional untuk meningkatkan branding perusahaan.",
-      image: "/qiyo.png",
-      link: "https://qiyo-compro-2.vercel.app/",
-    },
-    {
-      title: "E-Commerce Platform",
-      description: "Toko online dengan sistem pembayaran modern dan UI elegan.",
-      image: "/papergo.png",
-      link: "https://papergo.cervosys.com/",
-    },
-    {
-      title: "Portfolio Designer",
-      description: "Website personal untuk menampilkan karya-karya kreatif.",
-      image: "/qiyo.png",
-      link: "https://qiyo-compro-2.vercel.app/",
-    },
-  ];
+  {
+    title: "Company Profile Website",
+    description: "Website profesional untuk meningkatkan branding perusahaan.",
+    image: "/qiyo.png",
+    link: "https://qiyo-compro-2.vercel.app/",
+  },
+  {
+    title: "E-Commerce Platform",
+    description: "Toko online dengan sistem pembayaran modern dan UI elegan.",
+    image: "/papergo.png",
+    link: "https://papergo.cervosys.com/",
+  },
+  {
+    title: "Portfolio Designer",
+    description: "Website personal untuk menampilkan karya-karya kreatif.",
+    image: "/qiyo.png",
+    link: "https://qiyo-compro-2.vercel.app/",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -51,8 +58,9 @@ export default function AboutPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Kami adalah tim kreatif yang berfokus pada desain dan pengembangan web modern.
-          Misi kami adalah menghadirkan pengalaman digital yang menarik, cepat, dan mudah digunakan.
+          Kami adalah tim kreatif yang berfokus pada desain dan pengembangan web
+          modern. Misi kami adalah menghadirkan pengalaman digital yang menarik,
+          cepat, dan mudah digunakan.
         </motion.p>
       </section>
 
@@ -68,13 +76,15 @@ export default function AboutPage() {
             Siapa Kami?
           </h2>
           <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-4">
-            Kami percaya bahwa setiap proyek digital harus memiliki jiwa dan karakter.
-            Dengan perpaduan antara teknologi modern dan estetika desain, kami menciptakan
-            solusi web yang tidak hanya fungsional, tetapi juga indah dan berkesan.
+            Kami percaya bahwa setiap proyek digital harus memiliki jiwa dan
+            karakter. Dengan perpaduan antara teknologi modern dan estetika
+            desain, kami menciptakan solusi web yang tidak hanya fungsional,
+            tetapi juga indah dan berkesan.
           </p>
           <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-            Dalam setiap pekerjaan, kami mengutamakan kolaborasi, inovasi, dan kepuasan pengguna.
-            Kami terus belajar dan berkembang untuk selalu menghadirkan hasil terbaik.
+            Dalam setiap pekerjaan, kami mengutamakan kolaborasi, inovasi, dan
+            kepuasan pengguna. Kami terus belajar dan berkembang untuk selalu
+            menghadirkan hasil terbaik.
           </p>
         </motion.div>
 
@@ -85,9 +95,18 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="flex justify-center"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-indigo-400 to-purple-400 flex items-center justify-center shadow-xl">
+          <div
+            className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-indigo-400 to-purple-400 flex items-center justify-center shadow-xl"
+            style={{ backgroundImage: "url[/About.jpg]" }}
+          >
+            <Image
+              src={"/About.jpg"}
+              alt="pict of About"
+              fill
+              className="object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-full opacity-100"
+            />
             <motion.div
-              className="absolute inset-3 bg-white/70 backdrop-blur-md rounded-full"
+              className="absolute inset-3 bg-white/70 backdrop-blur-md rounded-full opacity-30"
               animate={{
                 scale: [1, 1.05, 1],
                 rotate: [0, 3, -3, 0],
@@ -98,9 +117,6 @@ export default function AboutPage() {
                 ease: "easeInOut",
               }}
             />
-            <span className="relative z-10 text-2xl sm:text-3xl font-semibold text-indigo-800">
-              💻 Web Studio
-            </span>
           </div>
         </motion.div>
       </section>
@@ -124,7 +140,9 @@ export default function AboutPage() {
               desc: "Kami berkomitmen untuk mencapai hasil yang berdampak bagi klien dan pengguna.",
             },
             {
-              icon: <HeartHandshake className="w-10 h-10 text-indigo-600 mb-4" />,
+              icon: (
+                <HeartHandshake className="w-10 h-10 text-indigo-600 mb-4" />
+              ),
               title: "Kolaborasi & Kepercayaan",
               desc: "Kami percaya hasil terbaik lahir dari kerja sama dan komunikasi terbuka.",
             },
@@ -143,7 +161,9 @@ export default function AboutPage() {
               className="backdrop-blur-md bg-white/40 p-8 rounded-2xl shadow-md border border-white/30 hover:shadow-indigo-200 transition-all duration-300"
             >
               {item.icon}
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {item.title}
+              </h3>
               <p className="text-gray-600 text-sm sm:text-base">{item.desc}</p>
             </motion.div>
           ))}
@@ -156,9 +176,9 @@ export default function AboutPage() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {projects.map((project, index) => (
-          <PortfolioCard key={index} {...project} />
-        ))}
+          {projects.map((project, index) => (
+            <PortfolioCard key={index} {...project} />
+          ))}
         </div>
       </section>
     </div>

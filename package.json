@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "better-sqlite3": "^12.4.1",
     "chart.js": "^4.5.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.24",

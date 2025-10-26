@@ -4,11 +4,14 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import Image from "next/image";
 
 export default function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
-  const [messageStatus, setMessageStatus] = useState<"success" | "error" | null>(null);
+  const [messageStatus, setMessageStatus] = useState<
+    "success" | "error" | null
+  >(null);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,9 +21,9 @@ export default function ContactPage() {
     try {
       await emailjs.sendForm(
         "service_sch75qm",
-        "template_m5pwto5", 
+        "template_m5pwto5",
         formRef.current!,
-        "L4m6z02-5XrWq9T04" 
+        "L4m6z02-5XrWq9T04",
       );
       setMessageStatus("success");
       formRef.current?.reset();
@@ -104,7 +107,9 @@ export default function ContactPage() {
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-indigo-600 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-gray-800">Jam Operasional</h4>
+                  <h4 className="font-semibold text-gray-800">
+                    Jam Operasional
+                  </h4>
                   <p>Senin – Jumat: 09.00 - 17.00 WIB</p>
                   <p>Sabtu: 09.00 - 14.00 WIB</p>
                 </div>
@@ -112,8 +117,13 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-8">
-              <div className="w-full h-56 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-xl flex items-center justify-center text-gray-700 font-semibold">
-                Peta Lokasi (dummy)
+              <div className="relative w-full h-56 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-200 to-purple-200">
+                <Image
+                  src="/Lokasi.png"
+                  alt="Location"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                />
               </div>
             </div>
           </motion.div>

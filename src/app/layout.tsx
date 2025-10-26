@@ -14,8 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Website Modern",
-  description: "Website profesional dengan Next.js + TailwindCSS",
+  title: "DevoSys",
+  description: "Modern dan responsif, untuk website anda",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

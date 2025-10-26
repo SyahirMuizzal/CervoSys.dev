@@ -20,9 +20,12 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">MyBrand</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            CervoSys.dev
+          </h2>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Membangun pengalaman digital modern dengan desain elegan dan performa tinggi.
+            Membangun pengalaman digital modern dengan desain elegan dan
+            performa tinggi.
           </p>
         </motion.div>
 
@@ -54,7 +57,9 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">Ikuti Kami</h3>
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">
+            Ikuti Kami
+          </h3>
           <div className="flex space-x-4">
             <a
               href="https://facebook.com"

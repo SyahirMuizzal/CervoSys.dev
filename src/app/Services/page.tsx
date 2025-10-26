@@ -61,8 +61,9 @@ export default function ServicesPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Kami menyediakan layanan pembuatan website profesional yang dirancang untuk
-          membantu bisnis Anda tampil lebih modern, cepat, dan terpercaya di dunia digital.
+          Kami menyediakan layanan pembuatan website profesional yang dirancang
+          untuk membantu bisnis Anda tampil lebih modern, cepat, dan terpercaya
+          di dunia digital.
         </motion.p>
       </section>
 
@@ -79,11 +80,15 @@ export default function ServicesPage() {
               className="backdrop-blur-md bg-white/50 p-8 rounded-2xl shadow-md border border-white/40 hover:shadow-indigo-200 transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center space-y-4">
-                <div className="p-4 bg-indigo-100 rounded-full">{service.icon}</div>
+                <div className="p-4 bg-indigo-100 rounded-full">
+                  {service.icon}
+                </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base">{service.desc}</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  {service.desc}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -106,11 +111,12 @@ export default function ServicesPage() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Tim kami siap membantu Anda menciptakan website profesional dan menarik yang sesuai
-          dengan kebutuhan bisnis Anda. Mulai dari ide hingga peluncuran — kami siap mendampingi.
+          Tim kami siap membantu Anda menciptakan website profesional dan
+          menarik yang sesuai dengan kebutuhan bisnis Anda. Mulai dari ide
+          hingga peluncuran — kami siap mendampingi.
         </motion.p>
         <motion.a
-          href="#contact"
+          href="/Contact"
           whileHover={{ scale: 1.05 }}
           className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 shadow-lg hover:shadow-indigo-300/50 transition-all duration-300"
         >
